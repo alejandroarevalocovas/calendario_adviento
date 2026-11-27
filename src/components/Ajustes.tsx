@@ -8,7 +8,7 @@ export const TEMAS: { id: Tema; nombre: string; colores: string[] }[] = [
   { id: 'rosa', nombre: 'Rosa romántico', colores: ['#f9d3de', '#fff4f7', '#c94b70'] },
   { id: 'abeto', nombre: 'Bosque de abetos', colores: ['#0d3b22', '#2f8a53', '#d8344a'] },
   { id: 'dorado', nombre: 'Dorado y blanco', colores: ['#fffaf0', '#d9ad45', '#5e3f05'] },
-  { id: 'aurora', nombre: 'Aurora boreal', colores: ['#2b0f57', '#5a2ca8', '#7df5d2'] },
+  { id: 'turquesa', nombre: 'Turquesa helada', colores: ['#1fa5b5', '#f2fdff', '#ff6b8a'] },
 ]
 
 type Props = {

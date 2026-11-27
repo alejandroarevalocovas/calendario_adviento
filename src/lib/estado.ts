@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
-export type Tema = 'clasico' | 'noche' | 'rosa' | 'abeto' | 'dorado' | 'aurora'
-const TEMAS_VALIDOS: Tema[] = ['clasico', 'noche', 'rosa', 'abeto', 'dorado', 'aurora']
+export type Tema = 'clasico' | 'noche' | 'rosa' | 'abeto' | 'dorado' | 'turquesa'
+const TEMAS_VALIDOS: Tema[] = ['clasico', 'noche', 'rosa', 'abeto', 'dorado', 'turquesa']
 
 export type Estado = {
   abiertos: number[]

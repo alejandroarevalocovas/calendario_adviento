@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import Intro from './components/Intro'
 import Calendario from './components/Calendario'
 import ModalDia from './components/ModalDia'
@@ -10,6 +10,9 @@ import { useEstado, exportarCodigo } from './lib/estado'
 import { ahora, claveHoy, diaDeHoy, diasParaNavidad, estaDesbloqueado, sincronizarHora, textoCuentaAtras, useAhora } from './lib/fecha'
 import { musica } from './lib/musica'
 import { DIAS } from './lib/contenido'
+
+// Panel de pruebas: solo existe con "npm run dev", nunca en la web publicada
+const PanelPruebas = import.meta.env.DEV ? lazy(() => import('./components/PanelPruebas')) : null
 
 const BROMAS = [
   '¡Ni lo intentes! 👀',
@@ -252,6 +255,12 @@ export default function App() {
           <b>{aviso.titulo}</b>
           <span>{aviso.sub}</span>
         </div>
+      )}
+
+      {PanelPruebas && (
+        <Suspense>
+          <PanelPruebas actualizar={actualizar} verIntro={() => setIntro('completa')} />
+        </Suspense>
       )}
 
       {intro && <Intro key={intro.n} modo={intro.modo} alTerminar={terminarIntro} />}

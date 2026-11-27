@@ -9,7 +9,7 @@ const POR_TEMA: Record<Tema, { tipo: Tipo; color: string }> = {
   rosa: { tipo: 'corazones', color: 'rgba(214,80,120,0.45)' },
   abeto: { tipo: 'nieve', color: 'rgba(255,255,255,0.85)' },
   dorado: { tipo: 'estrellas', color: 'rgba(196,146,30,0.75)' },
-  aurora: { tipo: 'estrellas', color: 'rgba(225,245,255,0.95)' },
+  turquesa: { tipo: 'nieve', color: 'rgba(255,255,255,0.9)' },
 }
 
 export default function Particulas({ tema }: { tema: Tema }) {

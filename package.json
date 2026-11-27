@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "probar": "vite --open /calendario_adviento/",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "codificar": "node scripts/codificar.mjs",

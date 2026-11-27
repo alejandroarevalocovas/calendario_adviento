@@ -25,7 +25,11 @@ npm install
 npm run dev
 ```
 
-Abre `http://localhost:5173/calendario_adviento/?fecha=2026-12-10T18:00` para simular una fecha. Esto **solo funciona en local**: la versión publicada usa la hora real, y si hay internet la toma del servidor.
+O `npm run probar`, que además abre el navegador.
+
+En local aparece el botón **🛠 Pruebas** abajo a la izquierda: cambia el día simulado (◀ ▶), cierra todas las puertas o empieza de cero. También vale `?fecha=2026-12-10T18:00` en la URL. Esto **solo existe en local**: la versión publicada usa la hora real, y si hay internet la toma del servidor.
+
+La lista de cosas que preparar está en `contenido/PREPARAR.md` (tampoco se sube).
 
 ## Otros comandos
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CASILLAS, type Casilla } from '../data/layout'
 import { diaPorNumero } from '../lib/contenido'
 import { estaDesbloqueado } from '../lib/fecha'
@@ -44,6 +44,9 @@ type PuertaProps = {
 function Puerta({ c, abierta, abriendo, desbloqueada, esHoy, tiembla, alTocar }: PuertaProps) {
   // Cuando ya está abierta y terminó la animación, la puerta se esconde (como si se hubiera recortado)
   const [asentada, setAsentada] = useState(abierta)
+  useEffect(() => {
+    if (!abierta && !abriendo) setAsentada(false)
+  }, [abierta, abriendo])
   const info = abierta || abriendo ? diaPorNumero(c.dia) : null
   const clases = [
     'casilla',

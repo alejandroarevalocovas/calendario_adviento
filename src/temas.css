@@ -147,34 +147,33 @@
   --hoy: #b8860b;
 }
 
-[data-tema='aurora'] {
-  --fondo: radial-gradient(ellipse at 25% 0%, rgba(80, 255, 200, 0.3), transparent 55%),
-    radial-gradient(ellipse at 85% 8%, rgba(200, 110, 255, 0.35), transparent 55%),
-    linear-gradient(180deg, #12062b 0%, #2b0f57 55%, #3f1a7a 100%);
-  --fondo-color: #1d0a40;
-  --texto: #f3e9ff;
-  --texto-suave: rgba(243, 233, 255, 0.72);
-  --acento: #7df5d2;
-  --puerta-a: #4a2390;
-  --puerta-b: #5a2ca8;
-  --puerta-c: #3f1d7d;
-  --puerta-borde: rgba(200, 170, 255, 0.5);
-  --puerta-textura: radial-gradient(1px 1px at 25% 30%, rgba(255, 255, 255, 0.6), transparent),
-    radial-gradient(1px 1px at 70% 65%, rgba(125, 245, 210, 0.6), transparent),
-    linear-gradient(160deg, rgba(125, 245, 210, 0.12), transparent 60%);
-  --dorso: #2a1260;
-  --numero: #f3e9ff;
-  --numero-sombra: 0 0 10px rgba(190, 140, 255, 0.85);
+[data-tema='turquesa'] {
+  --fondo: radial-gradient(ellipse at 50% 0%, #4fd6dd 0%, #1fa5b5 45%, #0d7488 100%);
+  --fondo-color: #1594a6;
+  --texto: #ffffff;
+  --texto-suave: rgba(255, 255, 255, 0.82);
+  --acento: #fff3a8;
+  --puerta-a: #f2fdff;
+  --puerta-b: #e0f6fa;
+  --puerta-c: #cdeff5;
+  --puerta-borde: rgba(14, 111, 132, 0.35);
+  /* Escarcha */
+  --puerta-textura: radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.8) 0 1px, transparent 2px),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.6), transparent 55%);
+  --dorso: #a9dde6;
+  --numero: #0e6f84;
+  --numero-sombra: 0 1px 0 #fff;
   --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
-  --lazo: #5ff2c8;
-  --interior: #1b0b3a;
-  --interior-texto: #f3e9ff;
-  --panel: #241046;
-  --panel-texto: #f3e9ff;
-  --boton: #8f4dff;
+  --lazo: #ff6b8a;
+  --interior: #ffffff;
+  --interior-texto: #0b5566;
+  --panel: #f6feff;
+  --panel-texto: #0b4a59;
+  --boton: #ff5c7f;
   --boton-texto: #fff;
-  --motivo: '✧';
-  --motivo-color: rgba(125, 245, 210, 0.35);
+  --motivo: '❄';
+  --motivo-color: rgba(14, 111, 132, 0.22);
   --radio: 14px;
-  --hoy: #7df5d2;
+  --hoy: #fff3a8;
 }

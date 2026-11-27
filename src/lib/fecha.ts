@@ -20,6 +20,13 @@ if (import.meta.env.DEV) {
 
 export const ahora = () => Date.now() + (fechaSimulada ?? desfase)
 
+/** Solo para el panel de pruebas en local */
+export function simularFecha(ms: number) {
+  if (!import.meta.env.DEV) return
+  fechaSimulada = ms - Date.now()
+  window.dispatchEvent(new Event('hora-sincronizada'))
+}
+
 export async function sincronizarHora() {
   if (import.meta.env.DEV) return
   try {
