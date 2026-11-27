@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { DIAS } from '../lib/contenido'
+import { Icono } from '../lib/iconos'
+import { ChevronLeft, Ticket } from 'lucide-react'
 
 type Props = {
   abiertos: number[]
@@ -17,12 +19,12 @@ export default function Vales({ abiertos, canjeados, alCanjear, alDeshacer, alCe
   const pendientes = descubiertos.filter((d) => !canjeados[d.dia])
   const usados = descubiertos.filter((d) => canjeados[d.dia])
 
-  const Ticket = ({ d }: { d: (typeof vales)[number] }) => {
+  const TicketVale = ({ d }: { d: (typeof vales)[number] }) => {
     const usado = canjeados[d.dia]
     return (
       <div className={`ticket ${usado ? 'usado' : ''}`}>
         <div className="ticket-izq">
-          <span className="ticket-emoji">{d.emoji}</span>
+          <Icono nombre={d.icono} size={34} className="ticket-icono" />
           <span className="ticket-dia">Día {d.dia}</span>
         </div>
         <div className="ticket-der">
@@ -67,22 +69,24 @@ export default function Vales({ abiertos, canjeados, alCanjear, alDeshacer, alCe
     <div className="pantalla">
       <div className="pantalla-cabecera">
         <button className="volver" onClick={alCerrar}>
-          ← Calendario
+          <ChevronLeft size={18} /> Calendario
         </button>
-        <h2>🎟️ Mis vales</h2>
+        <h2>
+          <Ticket size={26} /> Mis vales
+        </h2>
       </div>
       <div className="pantalla-cuerpo">
         {descubiertos.length === 0 && <p className="vacio">Aún no tienes vales. ¡Abre los días del calendario para conseguirlos!</p>}
         {pendientes.map((d) => (
-          <Ticket key={d.dia} d={d} />
+          <TicketVale key={d.dia} d={d} />
         ))}
         {usados.length > 0 && <h3 className="subtitulo">Ya canjeados</h3>}
         {usados.map((d) => (
-          <Ticket key={d.dia} d={d} />
+          <TicketVale key={d.dia} d={d} />
         ))}
         {ocultos > 0 && (
           <p className="ocultos">
-            🤫 Quedan {ocultos} {ocultos === 1 ? 'vale' : 'vales'} por descubrir…
+            Quedan {ocultos} {ocultos === 1 ? 'vale' : 'vales'} por descubrir…
           </p>
         )}
       </div>

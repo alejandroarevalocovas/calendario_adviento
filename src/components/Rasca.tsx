@@ -32,7 +32,7 @@ export default function Rasca({ alTerminar }: Props) {
     ctx.font = '600 22px Fredoka, sans-serif'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.fillText('✨ Rasca aquí ✨', r.width / 2, r.height / 2 - 10)
+    ctx.fillText('Rasca aquí', r.width / 2, r.height / 2 - 10)
     ctx.font = '400 14px Fredoka, sans-serif'
     ctx.fillText('Desliza el dedo para descubrirlo', r.width / 2, r.height / 2 + 18)
 

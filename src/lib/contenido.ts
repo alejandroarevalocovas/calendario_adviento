@@ -2,8 +2,9 @@ import { DATOS } from '../data/contenido'
 
 export type Dia = {
   dia: number
-  emoji: string
-  tipo: 'vale' | 'plan'
+  icono: string
+  // vale: se guarda para canjear · plan: algo que hacemos juntos · regalo: algo para ella · mimo: un cuidado para ella
+  tipo: 'vale' | 'plan' | 'regalo' | 'mimo'
   titulo: string
   texto: string
   pista?: string

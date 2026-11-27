@@ -23,7 +23,7 @@
   --panel-texto: #3b1d12;
   --boton: #b02a3c;
   --boton-texto: #fff;
-  --motivo: '❄';
+  --motivo: '❄\FE0E';
   --motivo-color: rgba(142, 27, 43, 0.18);
   --radio: 10px;
   --hoy: #ffd84d;
@@ -83,7 +83,7 @@
   --panel-texto: #6b2139;
   --boton: #d1577d;
   --boton-texto: #fff;
-  --motivo: '♥';
+  --motivo: '♥\FE0E';
   --motivo-color: rgba(201, 75, 112, 0.2);
   --radio: 14px;
   --hoy: #d1577d;
@@ -113,7 +113,7 @@
   --panel-texto: #123d25;
   --boton: #c62f45;
   --boton-texto: #fff;
-  --motivo: '❆';
+  --motivo: '❆\FE0E';
   --motivo-color: rgba(255, 255, 255, 0.22);
   --radio: 12px;
   --hoy: #ffd56b;
@@ -172,7 +172,7 @@
   --panel-texto: #0b4a59;
   --boton: #ff5c7f;
   --boton-texto: #fff;
-  --motivo: '❄';
+  --motivo: '❄\FE0E';
   --motivo-color: rgba(14, 111, 132, 0.22);
   --radio: 14px;
   --hoy: #fff3a8;

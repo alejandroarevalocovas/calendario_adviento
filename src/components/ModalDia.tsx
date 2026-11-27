@@ -3,6 +3,14 @@ import confetti from 'canvas-confetti'
 import { diaPorNumero } from '../lib/contenido'
 import { esEspecial } from '../data/layout'
 import Rasca from './Rasca'
+import { Icono, RUTA_CORAZON } from '../lib/iconos'
+import { Check, Gift, Heart, HeartHandshake, Search, Ticket, X } from 'lucide-react'
+
+const ETIQUETAS = {
+  plan: { Icon: HeartHandshake, texto: 'Plan para hacer juntos' },
+  regalo: { Icon: Gift, texto: 'Un regalo para ti' },
+  mimo: { Icon: Heart, texto: 'Un mimo para ti' },
+}
 
 type Props = {
   dia: number
@@ -17,8 +25,16 @@ type Props = {
 export function lanzarConfeti(dia: number) {
   const info = diaPorNumero(dia)
   if (info.aniversario) {
-    const corazon = confetti.shapeFromText({ text: '❤️', scalar: 2 })
-    confetti({ particleCount: 60, spread: 100, origin: { y: 0.6 }, shapes: [corazon], scalar: 2, zIndex: 60 })
+    const corazon = confetti.shapeFromPath({ path: RUTA_CORAZON })
+    confetti({
+      particleCount: 70,
+      spread: 100,
+      origin: { y: 0.6 },
+      shapes: [corazon],
+      colors: ['#e2384d', '#ff6b8a', '#ff9eb5'],
+      scalar: 1.8,
+      zIndex: 60,
+    })
     return
   }
   if (dia === 25 || dia === 24) {
@@ -59,15 +75,21 @@ export default function ModalDia({ dia, recienAbierto, rascado, canjeado, alRasc
     <div className="fondo-modal" onClick={alCerrar}>
       <div className={`modal-dia ${especial ? 'especial' : ''} ${info.aniversario ? 'aniversario' : ''}`} onClick={(e) => e.stopPropagation()}>
         <button className="cerrar" onClick={alCerrar} aria-label="Cerrar">
-          ✕
+          <X size={18} />
         </button>
         <div className="modal-fecha">{dia} de diciembre</div>
 
         <div className="premio">
-          <div className="premio-emoji">{info.emoji}</div>
+          <div className="premio-icono">
+            <Icono nombre={info.icono} size={44} />
+          </div>
           <h2 className="premio-titulo">{info.titulo}</h2>
           <p className="premio-texto">{info.texto}</p>
-          {info.pista && <p className="premio-pista">{info.pista}</p>}
+          {info.pista && (
+            <p className="premio-pista">
+              <Search size={18} /> {info.pista}
+            </p>
+          )}
           {conRasca && <Rasca alTerminar={terminarRasca} />}
         </div>
 
@@ -75,10 +97,12 @@ export default function ModalDia({ dia, recienAbierto, rascado, canjeado, alRasc
           (info.tipo === 'vale' ? (
             <div className={`etiqueta vale ${canjeado ? 'usado' : ''}`}>
               {canjeado ? (
-                <>✅ Vale canjeado el {new Date(canjeado).toLocaleDateString('es-ES')}</>
+                <>
+                  <Check size={16} /> Vale canjeado el {new Date(canjeado).toLocaleDateString('es-ES')}
+                </>
               ) : (
                 <>
-                  🎟️ Guardado en <b>Mis vales</b>
+                  <Ticket size={16} /> Guardado en <b>Mis vales</b>
                   <button className="enlace" onClick={alVerVales}>
                     Ver mis vales →
                   </button>
@@ -86,9 +110,18 @@ export default function ModalDia({ dia, recienAbierto, rascado, canjeado, alRasc
               )}
             </div>
           ) : (
-            <div className="etiqueta plan">💝 Plan para hacer juntos</div>
+            <Etiqueta tipo={info.tipo} />
           ))}
       </div>
+    </div>
+  )
+}
+
+function Etiqueta({ tipo }: { tipo: 'plan' | 'regalo' | 'mimo' }) {
+  const { Icon, texto } = ETIQUETAS[tipo]
+  return (
+    <div className={`etiqueta ${tipo}`}>
+      <Icon size={16} /> {texto}
     </div>
   )
 }

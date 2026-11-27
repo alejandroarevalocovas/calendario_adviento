@@ -10,18 +10,19 @@ import { useEstado, exportarCodigo } from './lib/estado'
 import { ahora, claveHoy, diaDeHoy, diasParaNavidad, estaDesbloqueado, sincronizarHora, textoCuentaAtras, useAhora } from './lib/fecha'
 import { musica } from './lib/musica'
 import { DIAS } from './lib/contenido'
+import { Heart, Settings, Star, Ticket, Volume2, VolumeX } from 'lucide-react'
 
 // Panel de pruebas: solo existe con "npm run dev", nunca en la web publicada
 const PanelPruebas = import.meta.env.DEV ? lazy(() => import('./components/PanelPruebas')) : null
 
 const BROMAS = [
-  '¡Ni lo intentes! 👀',
-  'Papá Noel te está vigilando 🎅',
-  'La paciencia también es un regalo 🎁',
-  '¡Eh! Sin trampas 😏',
-  'Los elfos dicen que todavía no 🧝',
-  'Ese día aún no ha llegado ❄️',
-  'Buen intento, Xisca 😘',
+  '¡Ni lo intentes!',
+  'Papá Noel te está vigilando',
+  'La paciencia también es un regalo',
+  '¡Eh! Sin trampas',
+  'Los elfos dicen que todavía no',
+  'Ese día aún no ha llegado',
+  'Buen intento, Xisca',
 ]
 
 export default function App() {
@@ -151,7 +152,8 @@ export default function App() {
               <button className="boton-vales" onClick={() => setPantalla('vales')} aria-label="Mis vales">
                 <span className="etiqueta-vales">Vales</span>
                 <span className="icono">
-                  🎟️{valesPendientes > 0 && <span className="globo">{valesPendientes}</span>}
+                  <Ticket size={22} />
+                  {valesPendientes > 0 && <span className="globo">{valesPendientes}</span>}
                 </span>
               </button>
               <h1>
@@ -160,10 +162,10 @@ export default function App() {
               </h1>
               <div className="barra-der">
                 <button className="icono" onClick={() => cambiarMusica(!estado.musica)} aria-label="Música">
-                  {estado.musica ? '🔊' : '🔇'}
+                  {estado.musica ? <Volume2 size={20} /> : <VolumeX size={20} />}
                 </button>
                 <button className="icono" onClick={() => setAjustes(true)} aria-label="Ajustes">
-                  ⚙️
+                  <Settings size={20} />
                 </button>
               </div>
             </div>
@@ -175,20 +177,22 @@ export default function App() {
                   <span className="contador-txt">días para Navidad</span>
                 </>
               )}
-              {faltan === 1 && <span className="contador-txt grande">¡Mañana es Navidad! 🎄</span>}
-              {faltan === 0 && <span className="contador-txt grande">¡Hoy es Navidad! 🎁</span>}
-              {faltan < 0 && <span className="contador-txt grande">¡Feliz Navidad! ✨</span>}
+              {faltan === 1 && <span className="contador-txt grande">¡Mañana es Navidad!</span>}
+              {faltan === 0 && <span className="contador-txt grande">¡Hoy es Navidad!</span>}
+              {faltan < 0 && <span className="contador-txt grande">¡Feliz Navidad!</span>}
             </div>
             {hayResumen && (
               <button className="boton-resumen" onClick={() => setPantalla('resumen')}>
-                🌟 Ver nuestro diciembre
+                <Star size={16} /> Ver nuestro diciembre
               </button>
             )}
           </header>
 
-          <Calendario t={t} hoy={hoy} abiertos={estado.abiertos} abriendo={abriendo} alTocar={tocarDia} temblando={temblando} />
+          <Calendario t={t} hoy={hoy} abiertos={estado.abiertos} rascados={estado.rascados} abriendo={abriendo} alTocar={tocarDia} temblando={temblando} />
 
-          <footer className="pie">Hecho con ❤️ para ti</footer>
+          <footer className="pie">
+            Hecho con <Heart size={13} fill="currentColor" /> para ti
+          </footer>
         </main>
       )}
 

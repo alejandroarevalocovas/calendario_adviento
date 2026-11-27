@@ -162,7 +162,10 @@ h1 .t2 {
   padding: 4px 0;
 }
 .boton-resumen {
-  display: block;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   margin: 10px auto 0;
   border: 0;
   padding: 8px 16px;
@@ -172,6 +175,10 @@ h1 .t2 {
   font-weight: 600;
 }
 
+.pie svg {
+  vertical-align: -2px;
+  color: var(--boton);
+}
 .pie {
   text-align: center;
   color: var(--texto-suave);
@@ -214,13 +221,15 @@ h1 .t2 {
   overflow: hidden;
   padding: 6px;
 }
-.interior-emoji {
-  font-size: 30px;
-  line-height: 1;
+.interior-icono {
+  width: 30px;
+  height: 30px;
+  color: var(--boton);
+  flex-shrink: 0;
 }
-.mediano .interior-emoji { font-size: 34px; }
-.grande .interior-emoji { font-size: 52px; }
-.enorme .interior-emoji { font-size: 64px; }
+.mediano .interior-icono { width: 34px; height: 34px; }
+.grande .interior-icono { width: 50px; height: 50px; }
+.enorme .interior-icono { width: 62px; height: 62px; }
 .interior-titulo {
   font-size: 12px;
   font-weight: 500;
@@ -240,9 +249,11 @@ h1 .t2 {
 }
 .interior-vale {
   position: absolute;
-  bottom: 3px;
+  bottom: 4px;
   right: 5px;
-  font-size: 12px;
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
 }
 
 /* La puerta gira sobre su bisagra izquierda */
@@ -323,13 +334,6 @@ h1 .t2 {
     linear-gradient(0deg, transparent calc(50% - 9px), var(--lazo) calc(50% - 9px), var(--lazo) calc(50% + 9px), transparent calc(50% + 9px));
   opacity: 0.85;
 }
-.lazo::before {
-  content: '🎀';
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  font-size: 26px;
-}
 .grande .numero,
 .enorme .numero {
   background: var(--puerta-a);
@@ -375,7 +379,8 @@ h1 .t2 {
 }
 /* Días pasados sin abrir: un destello */
 .pendiente .puerta-frente::before {
-  content: '✨';
+  content: '✦';
+  color: var(--acento);
   position: absolute;
   top: 3px;
   left: 5px;
@@ -466,8 +471,11 @@ h1 .t2 {
 }
 .cerrar {
   position: absolute;
+  z-index: 3; /* por encima de la fecha (su opacidad la ponía delante y tapaba los clics) */
   top: 10px;
   right: 10px;
+  display: grid;
+  place-items: center;
   width: 34px;
   height: 34px;
   border: 0;
@@ -491,10 +499,20 @@ h1 .t2 {
   flex-direction: column;
   justify-content: center;
 }
-.premio-emoji {
-  font-size: 64px;
-  line-height: 1.1;
+.premio-icono {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--boton) 70%, #fff), var(--boton));
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--boton) 45%, transparent);
   animation: girarEmoji 0.8s ease;
+}
+.aniversario .premio-icono {
+  background: radial-gradient(circle at 35% 30%, #ff8fa8, #e0567f);
 }
 @keyframes girarEmoji {
   from { transform: scale(0) rotate(-30deg); }
@@ -512,6 +530,10 @@ h1 .t2 {
   opacity: 0.88;
 }
 .premio-pista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   margin: 14px 0 0;
   padding: 10px 12px;
   border-radius: 12px;
@@ -534,6 +556,10 @@ h1 .t2 {
   opacity: 0;
   pointer-events: none;
 }
+.etiqueta svg {
+  vertical-align: -3px;
+  margin-right: 2px;
+}
 .etiqueta {
   margin-top: 16px;
   padding: 10px 12px;
@@ -549,7 +575,9 @@ h1 .t2 {
   background: rgba(60, 160, 90, 0.15);
   border-color: rgba(60, 160, 90, 0.5);
 }
-.etiqueta.plan {
+.etiqueta.plan,
+.etiqueta.regalo,
+.etiqueta.mimo {
   background: rgba(209, 87, 125, 0.13);
 }
 .enlace {
@@ -590,11 +618,17 @@ h1 .t2 {
   margin-bottom: 14px;
 }
 .pantalla-cabecera h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 0;
   font-size: 28px;
   font-weight: 600;
 }
 .volver {
+  display: flex;
+  align-items: center;
+  gap: 2px;
   border: 0;
   background: none;
   color: var(--texto-suave);
@@ -643,8 +677,9 @@ h1 .t2 {
   color: #2b1a0e;
   border-right: 2px dashed rgba(0, 0, 0, 0.2);
 }
-.ticket-emoji {
-  font-size: 34px;
+.ticket-icono {
+  width: 34px;
+  height: 34px;
 }
 .ticket-dia {
   font-size: 12px;
@@ -727,6 +762,9 @@ h1 .t2 {
   font-size: 24px;
 }
 .hoja h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 18px 0 8px;
   font-size: 16px;
   font-weight: 500;
@@ -780,6 +818,9 @@ h1 .t2 {
   margin-top: 10px;
 }
 .cancion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   text-align: left;
   padding: 10px 12px;
   border: 0;
@@ -797,6 +838,10 @@ h1 .t2 {
   gap: 8px;
 }
 .mas .boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 12px;
   border-radius: 12px;
 }
@@ -805,6 +850,9 @@ h1 .t2 {
   font-size: 14px;
 }
 .copia summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 16px;
   font-weight: 500;
   padding: 6px 0;
@@ -858,6 +906,9 @@ h1 .t2 {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
   animation: saltar 0.5s cubic-bezier(0.2, 1.5, 0.4, 1) both;
 }
+.tesela svg {
+  color: var(--boton);
+}
 .tesela small {
   font-size: 11px;
   opacity: 0.6;
@@ -896,6 +947,15 @@ h1 .t2 {
   font-size: 17px;
   line-height: 1.5;
   margin-top: 26px;
+}
+.corazon-final {
+  display: block;
+  margin: 6px auto 0;
+  color: var(--boton);
+  animation: latido 1.2s ease-in-out infinite;
+}
+@keyframes latido {
+  50% { transform: scale(1.18); }
 }
 .firma {
   display: block;
