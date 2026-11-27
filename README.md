@@ -30,4 +30,4 @@ Abre `http://localhost:5173/calendario_adviento/?fecha=2026-12-10T18:00` para si
 ## Otros comandos
 
 - `npm run build`: compila en `dist/`.
-- `npm run iconos`: regenera los iconos de `public/`.
+- `npm run iconos -- regalo-noche`: regenera los iconos de `public/` (otros diseños en `scripts/disenos-icono.mjs`).
