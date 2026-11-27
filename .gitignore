@@ -1,0 +1,6 @@
+node_modules
+dist
+*.local
+# Contenido en claro: NO se sube para no hacer spoiler (se sube la versión codificada)
+contenido/dias.json
+*.tsbuildinfo

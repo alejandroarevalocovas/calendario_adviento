@@ -1,0 +1,176 @@
+/* Cada tema solo cambia variables: el calendario y lo abierto siguen siendo lo mismo */
+
+:root,
+[data-tema='clasico'] {
+  --fondo: radial-gradient(ellipse at 50% 0%, #b02a3c 0%, #7a1424 45%, #4a0a14 100%);
+  --fondo-color: #5a0d18;
+  --texto: #fff4e0;
+  --texto-suave: rgba(255, 244, 224, 0.75);
+  --acento: #f2c14e;
+  --puerta-a: #e2c096;
+  --puerta-b: #d4a874;
+  --puerta-c: #c99b66;
+  --puerta-borde: rgba(110, 62, 28, 0.45);
+  --puerta-textura: repeating-linear-gradient(45deg, rgba(120, 70, 30, 0.05) 0 2px, transparent 2px 6px);
+  --dorso: #b98a58;
+  --numero: #8e1b2b;
+  --numero-sombra: 0 1px 0 rgba(255, 255, 255, 0.5);
+  --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
+  --lazo: #1f6b3a;
+  --interior: #fff8ec;
+  --interior-texto: #5a0d18;
+  --panel: #fff8ec;
+  --panel-texto: #3b1d12;
+  --boton: #b02a3c;
+  --boton-texto: #fff;
+  --motivo: '❄';
+  --motivo-color: rgba(142, 27, 43, 0.18);
+  --radio: 10px;
+  --hoy: #ffd84d;
+}
+
+[data-tema='noche'] {
+  --fondo: linear-gradient(180deg, #050b1f 0%, #0b1a3d 50%, #1b2f63 100%);
+  --fondo-color: #0b1430;
+  --texto: #e9eefb;
+  --texto-suave: rgba(233, 238, 251, 0.7);
+  --acento: #9fc5ff;
+  --puerta-a: #1d3264;
+  --puerta-b: #243c75;
+  --puerta-c: #2b4686;
+  --puerta-borde: rgba(201, 211, 234, 0.45);
+  --puerta-textura: radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 70% 60%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 40% 80%, rgba(255, 255, 255, 0.35), transparent);
+  --dorso: #14234a;
+  --numero: #e9eefb;
+  --numero-sombra: 0 0 10px rgba(159, 197, 255, 0.6);
+  --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
+  --lazo: #c9d3ea;
+  --interior: #0f1d40;
+  --interior-texto: #e9eefb;
+  --panel: #13244d;
+  --panel-texto: #e9eefb;
+  --boton: #4a78d6;
+  --boton-texto: #fff;
+  --motivo: '✦';
+  --motivo-color: rgba(201, 211, 234, 0.3);
+  --radio: 12px;
+  --hoy: #9fc5ff;
+}
+
+[data-tema='nordico'] {
+  --fondo: linear-gradient(180deg, #f7f3ec 0%, #efe7da 100%);
+  --fondo-color: #f4efe6;
+  --texto: #3a2e25;
+  --texto-suave: rgba(58, 46, 37, 0.65);
+  --acento: #b3261e;
+  --puerta-a: #fffaf2;
+  --puerta-b: #f1e6d2;
+  --puerta-c: #e8d6b8;
+  --puerta-borde: rgba(150, 120, 80, 0.4);
+  --puerta-textura: repeating-linear-gradient(90deg, rgba(160, 120, 70, 0.06) 0 1px, transparent 1px 9px);
+  --dorso: #dcc7a3;
+  --numero: #b3261e;
+  --numero-sombra: none;
+  --fuente-numero: 'Fredoka', sans-serif;
+  --lazo: #b3261e;
+  --interior: #ffffff;
+  --interior-texto: #3a2e25;
+  --panel: #fffdf9;
+  --panel-texto: #3a2e25;
+  --boton: #b3261e;
+  --boton-texto: #fff;
+  --motivo: '❅';
+  --motivo-color: rgba(179, 38, 30, 0.2);
+  --radio: 6px;
+  --hoy: #b3261e;
+}
+
+[data-tema='jengibre'] {
+  --fondo: radial-gradient(ellipse at 50% 0%, #6b4128 0%, #4a2c1a 55%, #2e1a0e 100%);
+  --fondo-color: #4a2c1a;
+  --texto: #fff8f0;
+  --texto-suave: rgba(255, 248, 240, 0.75);
+  --acento: #ffd7a8;
+  --puerta-a: #b8733d;
+  --puerta-b: #a8652f;
+  --puerta-c: #9c5a2b;
+  --puerta-borde: #fff8f0;
+  --puerta-textura: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 0 2px, transparent 3px),
+    radial-gradient(circle at 75% 70%, rgba(80, 40, 10, 0.15) 0 2px, transparent 3px);
+  --dorso: #7d4520;
+  --numero: #fff8f0;
+  --numero-sombra: 0 2px 0 rgba(90, 45, 15, 0.6);
+  --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
+  --lazo: #e8505b;
+  --interior: #fff3e3;
+  --interior-texto: #4a2c1a;
+  --panel: #fff3e3;
+  --panel-texto: #4a2c1a;
+  --boton: #c0392b;
+  --boton-texto: #fff;
+  --motivo: '✻';
+  --motivo-color: rgba(255, 248, 240, 0.35);
+  --radio: 16px;
+  --hoy: #fff8f0;
+}
+
+[data-tema='rosa'] {
+  --fondo: linear-gradient(180deg, #fde8ee 0%, #f8cfdb 100%);
+  --fondo-color: #f9d3de;
+  --texto: #8a2d4b;
+  --texto-suave: rgba(138, 45, 75, 0.7);
+  --acento: #c99434;
+  --puerta-a: #fff4f7;
+  --puerta-b: #ffe6ee;
+  --puerta-c: #fdd9e4;
+  --puerta-borde: rgba(214, 120, 150, 0.45);
+  --puerta-textura: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6) 0 1px, transparent 2px);
+  --dorso: #f4bccc;
+  --numero: #c94b70;
+  --numero-sombra: 0 1px 0 #fff;
+  --fuente-numero: 'Great Vibes', cursive;
+  --lazo: #d4a24c;
+  --interior: #ffffff;
+  --interior-texto: #8a2d4b;
+  --panel: #fff7fa;
+  --panel-texto: #6b2139;
+  --boton: #d1577d;
+  --boton-texto: #fff;
+  --motivo: '♥';
+  --motivo-color: rgba(201, 75, 112, 0.2);
+  --radio: 14px;
+  --hoy: #d1577d;
+}
+
+[data-tema='cabana'] {
+  --fondo: radial-gradient(ellipse at 50% 110%, #7a3a12 0%, #3a2216 45%, #1e130c 100%);
+  --fondo-color: #2a1a12;
+  --texto: #ffe9c7;
+  --texto-suave: rgba(255, 233, 199, 0.7);
+  --acento: #ffb347;
+  --puerta-a: #a3352b;
+  --puerta-b: #2f6b3f;
+  --puerta-c: #8c2a22;
+  --puerta-borde: rgba(255, 220, 170, 0.35);
+  /* Tela de cuadros */
+  --puerta-textura: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 6px, transparent 6px 14px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.18) 0 6px, transparent 6px 14px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 14px);
+  --dorso: #5a2a18;
+  --numero: #ffe2a8;
+  --numero-sombra: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
+  --lazo: #ffd27a;
+  --interior: #fff3dd;
+  --interior-texto: #3a2216;
+  --panel: #fff3dd;
+  --panel-texto: #3a2216;
+  --boton: #c4572b;
+  --boton-texto: #fff;
+  --motivo: '✶';
+  --motivo-color: rgba(255, 226, 168, 0.3);
+  --radio: 8px;
+  --hoy: #ffb347;
+}
