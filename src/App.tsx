@@ -145,11 +145,14 @@ export default function App() {
         <main className="principal">
           <header className="cabecera">
             <div className="barra">
-              <button className="icono" onClick={() => setPantalla('vales')} aria-label="Mis vales">
-                🎟️{valesPendientes > 0 && <span className="globo">{valesPendientes}</span>}
+              <button className="boton-vales" onClick={() => setPantalla('vales')} aria-label="Mis vales">
+                <span className="etiqueta-vales">Vales</span>
+                <span className="icono">
+                  🎟️{valesPendientes > 0 && <span className="globo">{valesPendientes}</span>}
+                </span>
               </button>
               <h1>
-                <span className="t1">Adviento de</span>
+                <span className="t1">Calendario de</span>
                 <span className="t2">Xisca</span>
               </h1>
               <div className="barra-der">

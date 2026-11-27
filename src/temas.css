@@ -59,62 +59,7 @@
   --hoy: #9fc5ff;
 }
 
-[data-tema='nordico'] {
-  --fondo: linear-gradient(180deg, #f7f3ec 0%, #efe7da 100%);
-  --fondo-color: #f4efe6;
-  --texto: #3a2e25;
-  --texto-suave: rgba(58, 46, 37, 0.65);
-  --acento: #b3261e;
-  --puerta-a: #fffaf2;
-  --puerta-b: #f1e6d2;
-  --puerta-c: #e8d6b8;
-  --puerta-borde: rgba(150, 120, 80, 0.4);
-  --puerta-textura: repeating-linear-gradient(90deg, rgba(160, 120, 70, 0.06) 0 1px, transparent 1px 9px);
-  --dorso: #dcc7a3;
-  --numero: #b3261e;
-  --numero-sombra: none;
-  --fuente-numero: 'Fredoka', sans-serif;
-  --lazo: #b3261e;
-  --interior: #ffffff;
-  --interior-texto: #3a2e25;
-  --panel: #fffdf9;
-  --panel-texto: #3a2e25;
-  --boton: #b3261e;
-  --boton-texto: #fff;
-  --motivo: '❅';
-  --motivo-color: rgba(179, 38, 30, 0.2);
-  --radio: 6px;
-  --hoy: #b3261e;
-}
 
-[data-tema='jengibre'] {
-  --fondo: radial-gradient(ellipse at 50% 0%, #6b4128 0%, #4a2c1a 55%, #2e1a0e 100%);
-  --fondo-color: #4a2c1a;
-  --texto: #fff8f0;
-  --texto-suave: rgba(255, 248, 240, 0.75);
-  --acento: #ffd7a8;
-  --puerta-a: #b8733d;
-  --puerta-b: #a8652f;
-  --puerta-c: #9c5a2b;
-  --puerta-borde: #fff8f0;
-  --puerta-textura: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 0 2px, transparent 3px),
-    radial-gradient(circle at 75% 70%, rgba(80, 40, 10, 0.15) 0 2px, transparent 3px);
-  --dorso: #7d4520;
-  --numero: #fff8f0;
-  --numero-sombra: 0 2px 0 rgba(90, 45, 15, 0.6);
-  --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
-  --lazo: #e8505b;
-  --interior: #fff3e3;
-  --interior-texto: #4a2c1a;
-  --panel: #fff3e3;
-  --panel-texto: #4a2c1a;
-  --boton: #c0392b;
-  --boton-texto: #fff;
-  --motivo: '✻';
-  --motivo-color: rgba(255, 248, 240, 0.35);
-  --radio: 16px;
-  --hoy: #fff8f0;
-}
 
 [data-tema='rosa'] {
   --fondo: linear-gradient(180deg, #fde8ee 0%, #f8cfdb 100%);
@@ -144,33 +89,92 @@
   --hoy: #d1577d;
 }
 
-[data-tema='cabana'] {
-  --fondo: radial-gradient(ellipse at 50% 110%, #7a3a12 0%, #3a2216 45%, #1e130c 100%);
-  --fondo-color: #2a1a12;
-  --texto: #ffe9c7;
-  --texto-suave: rgba(255, 233, 199, 0.7);
-  --acento: #ffb347;
-  --puerta-a: #a3352b;
-  --puerta-b: #2f6b3f;
-  --puerta-c: #8c2a22;
-  --puerta-borde: rgba(255, 220, 170, 0.35);
-  /* Tela de cuadros */
-  --puerta-textura: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 6px, transparent 6px 14px),
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.18) 0 6px, transparent 6px 14px),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 14px);
-  --dorso: #5a2a18;
-  --numero: #ffe2a8;
-  --numero-sombra: 0 2px 4px rgba(0, 0, 0, 0.5);
+[data-tema='abeto'] {
+  --fondo: radial-gradient(ellipse at 50% 0%, #2a8550 0%, #11472a 50%, #06261a 100%);
+  --fondo-color: #0d3b22;
+  --texto: #f2fff5;
+  --texto-suave: rgba(242, 255, 245, 0.72);
+  --acento: #ffd56b;
+  --puerta-a: #2f8a53;
+  --puerta-b: #277a48;
+  --puerta-c: #35965c;
+  --puerta-borde: rgba(220, 255, 230, 0.35);
+  /* Agujas de pino */
+  --puerta-textura: repeating-linear-gradient(60deg, rgba(0, 0, 0, 0.07) 0 2px, transparent 2px 7px),
+    repeating-linear-gradient(-60deg, rgba(255, 255, 255, 0.05) 0 2px, transparent 2px 7px);
+  --dorso: #1c5c36;
+  --numero: #fff6dc;
+  --numero-sombra: 0 2px 3px rgba(0, 0, 0, 0.35);
   --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
-  --lazo: #ffd27a;
-  --interior: #fff3dd;
-  --interior-texto: #3a2216;
-  --panel: #fff3dd;
-  --panel-texto: #3a2216;
-  --boton: #c4572b;
+  --lazo: #d8344a;
+  --interior: #f4fff6;
+  --interior-texto: #0d3b22;
+  --panel: #f4fbf5;
+  --panel-texto: #123d25;
+  --boton: #c62f45;
   --boton-texto: #fff;
-  --motivo: '✶';
-  --motivo-color: rgba(255, 226, 168, 0.3);
-  --radio: 8px;
-  --hoy: #ffb347;
+  --motivo: '❆';
+  --motivo-color: rgba(255, 255, 255, 0.22);
+  --radio: 12px;
+  --hoy: #ffd56b;
+}
+
+[data-tema='dorado'] {
+  --fondo: radial-gradient(ellipse at 50% 0%, #fffdf6 0%, #f8ecd0 55%, #ecd6a6 100%);
+  --fondo-color: #f6e8c8;
+  --texto: #5a4210;
+  --texto-suave: rgba(90, 66, 16, 0.68);
+  --acento: #b8860b;
+  --puerta-a: linear-gradient(135deg, #f7e3a1, #d9ad45 50%, #f2d77e);
+  --puerta-b: linear-gradient(135deg, #fff3c9, #e2bd5a 55%, #f7e7b0);
+  --puerta-c: linear-gradient(135deg, #ecd08a, #c99a2e 50%, #efd487);
+  --puerta-borde: rgba(140, 100, 20, 0.45);
+  --puerta-textura: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.45) 50%, transparent 60%);
+  --dorso: #c9a04a;
+  --numero: #5e3f05;
+  --numero-sombra: 0 1px 0 rgba(255, 255, 255, 0.7);
+  --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
+  --lazo: #a8182c;
+  --interior: #fffdf7;
+  --interior-texto: #5a4210;
+  --panel: #fffdf7;
+  --panel-texto: #4a360c;
+  --boton: #b8860b;
+  --boton-texto: #fff;
+  --motivo: '✦';
+  --motivo-color: rgba(94, 63, 5, 0.25);
+  --radio: 10px;
+  --hoy: #b8860b;
+}
+
+[data-tema='aurora'] {
+  --fondo: radial-gradient(ellipse at 25% 0%, rgba(80, 255, 200, 0.3), transparent 55%),
+    radial-gradient(ellipse at 85% 8%, rgba(200, 110, 255, 0.35), transparent 55%),
+    linear-gradient(180deg, #12062b 0%, #2b0f57 55%, #3f1a7a 100%);
+  --fondo-color: #1d0a40;
+  --texto: #f3e9ff;
+  --texto-suave: rgba(243, 233, 255, 0.72);
+  --acento: #7df5d2;
+  --puerta-a: #4a2390;
+  --puerta-b: #5a2ca8;
+  --puerta-c: #3f1d7d;
+  --puerta-borde: rgba(200, 170, 255, 0.5);
+  --puerta-textura: radial-gradient(1px 1px at 25% 30%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 70% 65%, rgba(125, 245, 210, 0.6), transparent),
+    linear-gradient(160deg, rgba(125, 245, 210, 0.12), transparent 60%);
+  --dorso: #2a1260;
+  --numero: #f3e9ff;
+  --numero-sombra: 0 0 10px rgba(190, 140, 255, 0.85);
+  --fuente-numero: 'Mountains of Christmas', 'Fredoka', cursive;
+  --lazo: #5ff2c8;
+  --interior: #1b0b3a;
+  --interior-texto: #f3e9ff;
+  --panel: #241046;
+  --panel-texto: #f3e9ff;
+  --boton: #8f4dff;
+  --boton-texto: #fff;
+  --motivo: '✧';
+  --motivo-color: rgba(125, 245, 210, 0.35);
+  --radio: 14px;
+  --hoy: #7df5d2;
 }

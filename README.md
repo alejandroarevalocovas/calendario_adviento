@@ -1,4 +1,4 @@
-# Calendario de adviento de Xisca 🎄
+# Calendario de Xisca 🎄
 
 Web app instalable (PWA) para iPhone: se abre en Safari, **Compartir → Añadir a pantalla de inicio**, y queda como una app.
 

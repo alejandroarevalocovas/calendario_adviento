@@ -4,3 +4,5 @@ dist
 # Contenido en claro: NO se sube para no hacer spoiler (se sube la versión codificada)
 contenido/dias.json
 *.tsbuildinfo
+opciones-icono.html
+opciones-icono.png

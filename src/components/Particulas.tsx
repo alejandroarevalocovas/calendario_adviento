@@ -6,10 +6,10 @@ type Tipo = 'nieve' | 'corazones' | 'estrellas'
 const POR_TEMA: Record<Tema, { tipo: Tipo; color: string }> = {
   clasico: { tipo: 'nieve', color: 'rgba(255,255,255,0.85)' },
   noche: { tipo: 'estrellas', color: 'rgba(220,232,255,0.9)' },
-  nordico: { tipo: 'nieve', color: 'rgba(150,175,205,0.7)' },
-  jengibre: { tipo: 'nieve', color: 'rgba(255,248,240,0.8)' },
   rosa: { tipo: 'corazones', color: 'rgba(214,80,120,0.45)' },
-  cabana: { tipo: 'nieve', color: 'rgba(255,240,220,0.75)' },
+  abeto: { tipo: 'nieve', color: 'rgba(255,255,255,0.85)' },
+  dorado: { tipo: 'estrellas', color: 'rgba(196,146,30,0.75)' },
+  aurora: { tipo: 'estrellas', color: 'rgba(225,245,255,0.95)' },
 }
 
 export default function Particulas({ tema }: { tema: Tema }) {

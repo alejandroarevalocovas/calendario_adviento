@@ -73,9 +73,25 @@ button {
   place-items: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-[data-tema='nordico'] .icono,
+[data-tema='dorado'] .icono,
 [data-tema='rosa'] .icono {
   background: rgba(255, 255, 255, 0.7);
+}
+.boton-vales {
+  border: 0;
+  background: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.etiqueta-vales {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--acento);
 }
 .globo {
   position: absolute;
@@ -107,9 +123,9 @@ h1 .t1 {
 }
 h1 .t2 {
   display: block;
-  font-family: 'Great Vibes', cursive;
-  font-weight: 400;
-  font-size: 58px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 50px;
   color: var(--acento);
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   margin-top: 2px;
@@ -125,7 +141,7 @@ h1 .t2 {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-[data-tema='nordico'] .contador,
+[data-tema='dorado'] .contador,
 [data-tema='rosa'] .contador {
   background: rgba(255, 255, 255, 0.6);
   border-color: rgba(0, 0, 0, 0.06);
@@ -154,23 +170,6 @@ h1 .t2 {
   background: var(--acento);
   color: var(--fondo-color);
   font-weight: 600;
-}
-
-/* Guirnalda de luces en la cabaña */
-[data-tema='cabana'] .cabecera::before {
-  content: '';
-  position: absolute;
-  left: -14px;
-  right: -14px;
-  top: calc(-10px - env(safe-area-inset-top));
-  height: 16px;
-  background: radial-gradient(circle, #ffd27a 0 3px, transparent 4px) 0 0 / 28px 16px,
-    radial-gradient(circle, #ff6b5b 0 3px, transparent 4px) 14px 4px / 28px 16px;
-  filter: drop-shadow(0 0 4px #ffb347);
-  animation: guirnalda 1.5s steps(2) infinite;
-}
-@keyframes guirnalda {
-  50% { filter: drop-shadow(0 0 8px #ffd27a); opacity: 0.75; }
 }
 
 .pie {
@@ -285,9 +284,6 @@ h1 .t2 {
 }
 .tono-1 .puerta-frente { background: var(--puerta-textura), var(--puerta-b); }
 .tono-2 .puerta-frente { background: var(--puerta-textura), var(--puerta-c); }
-[data-tema='jengibre'] .puerta-frente {
-  border: 3px dashed var(--puerta-borde);
-}
 .puerta-frente::after {
   content: var(--motivo);
   position: absolute;
@@ -883,7 +879,7 @@ h1 .t2 {
   display: flex;
   flex-direction: column;
 }
-[data-tema='nordico'] .cifras div,
+[data-tema='dorado'] .cifras div,
 [data-tema='rosa'] .cifras div {
   background: rgba(255, 255, 255, 0.6);
 }
@@ -903,7 +899,8 @@ h1 .t2 {
 }
 .firma {
   display: block;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
   font-size: 40px;
   color: var(--acento);
   margin-top: 8px;

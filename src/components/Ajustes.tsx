@@ -5,10 +5,10 @@ import { MELODIAS } from '../lib/melodias'
 export const TEMAS: { id: Tema; nombre: string; colores: string[] }[] = [
   { id: 'clasico', nombre: 'Clásico', colores: ['#8e1b2b', '#d9b48a', '#1f6b3a'] },
   { id: 'noche', nombre: 'Noche nevada', colores: ['#0b1430', '#243c75', '#c9d3ea'] },
-  { id: 'nordico', nombre: 'Nórdico', colores: ['#f4efe6', '#e8d5b5', '#b3261e'] },
-  { id: 'jengibre', nombre: 'Pan de jengibre', colores: ['#4a2c1a', '#b06a35', '#fff8f0'] },
   { id: 'rosa', nombre: 'Rosa romántico', colores: ['#f9d3de', '#fff4f7', '#c94b70'] },
-  { id: 'cabana', nombre: 'Cabaña acogedora', colores: ['#2a1a12', '#a3352b', '#ffb347'] },
+  { id: 'abeto', nombre: 'Bosque de abetos', colores: ['#0d3b22', '#2f8a53', '#d8344a'] },
+  { id: 'dorado', nombre: 'Dorado y blanco', colores: ['#fffaf0', '#d9ad45', '#5e3f05'] },
+  { id: 'aurora', nombre: 'Aurora boreal', colores: ['#2b0f57', '#5a2ca8', '#7df5d2'] },
 ]
 
 type Props = {

@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['apple-touch-icon.png', 'favicon.svg'],
       manifest: {
-        name: 'Adviento de Xisca',
-        short_name: 'Adviento',
-        description: 'Calendario de adviento de Xisca',
+        name: 'Calendario de Xisca',
+        short_name: 'Calendario',
+        description: 'El calendario de adviento de Xisca',
         lang: 'es',
         display: 'standalone',
         orientation: 'portrait',

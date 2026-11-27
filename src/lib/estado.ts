@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 
-export type Tema = 'clasico' | 'noche' | 'nordico' | 'jengibre' | 'rosa' | 'cabana'
+export type Tema = 'clasico' | 'noche' | 'rosa' | 'abeto' | 'dorado' | 'aurora'
+const TEMAS_VALIDOS: Tema[] = ['clasico', 'noche', 'rosa', 'abeto', 'dorado', 'aurora']
 
 export type Estado = {
   abiertos: number[]
@@ -59,7 +60,10 @@ async function escribirDB(e: Estado) {
 function leerLocal(): Estado | null {
   try {
     const t = localStorage.getItem(CLAVE)
-    return t ? { ...INICIAL, ...JSON.parse(t) } : null
+    if (!t) return null
+    const e: Estado = { ...INICIAL, ...JSON.parse(t) }
+    if (!TEMAS_VALIDOS.includes(e.tema)) e.tema = 'clasico'
+    return e
   } catch {
     return null
   }
